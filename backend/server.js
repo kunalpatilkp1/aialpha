@@ -24,6 +24,9 @@ const writeTasks = (tasks) => {
 
 app.get('/tasks', (req, res) => {
   res.json(readTasks());
+  "title": "New Task",
+  "description": "This is a new task",
+  "dueDate": "2024-06-30"
 });
 
 app.post('/tasks', (req, res) => {
@@ -44,6 +47,9 @@ app.put('/tasks/:id', (req, res) => {
   } else {
     res.status(404).json({ message: 'Task not found' });
   }
+  "title": "Updated Task",
+  "description": "This task has been updated",
+  "dueDate": "2024-07-01"
 });
 
 app.delete('/tasks/:id', (req, res) => {
