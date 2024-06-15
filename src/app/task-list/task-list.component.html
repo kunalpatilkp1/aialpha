@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <h2>Task List</h2>
+    <button routerLink="/add" class="btn btn-primary mb-3">Add Task</button>
+    <ul class="list-group">
+      <li *ngFor="let task of tasks" class="list-group-item">
+        <h5>{{ task.title }}</h5>
+        <p>{{ task.description }}</p>
+        <small>Due: {{ task.dueDate | date }}</small>
+        <button (click)="editTask(task.id)" class="btn btn-sm btn-info">Edit</button>
+        <button (click)="deleteTask(task.id)" class="btn btn-sm btn-danger">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
